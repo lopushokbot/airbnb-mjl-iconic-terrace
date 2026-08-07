@@ -116,6 +116,16 @@
     margin: 24px 0;
   }
 
+  .card-alert {
+    background: rgba(192, 48, 48, 0.05);
+    border: 1px solid rgba(192, 48, 48, 0.25);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin: 32px 0;
+  }
+
+  .card-alert h4 { color: var(--red); margin-top: 0; }
+
   .pull-quote {
     font-family: 'New York', 'Iowan Old Style', 'Georgia', serif;
     font-size: 26px;
@@ -200,7 +210,7 @@
 
   .chart-row {
     display: grid;
-    grid-template-columns: 130px 1fr 90px;
+    grid-template-columns: 130px 1fr 150px;
     gap: 16px;
     align-items: center;
     padding: 8px 0;
@@ -328,7 +338,7 @@
     h1 { font-size: 32pt; }
     h2 { font-size: 20pt; margin-top: 32pt; page-break-after: avoid; }
     h3 { font-size: 14pt; page-break-after: avoid; }
-    .card, .card-light, .chart { break-inside: avoid; }
+    .card, .card-light, .card-alert, .chart { break-inside: avoid; }
     table { break-inside: auto; }
     tr { break-inside: avoid; break-after: auto; }
     .pull-quote { break-inside: avoid; }
@@ -339,7 +349,7 @@
     h1 { font-size: 40px; }
     h2 { font-size: 28px; }
     .summary-grid { grid-template-columns: 1fr; }
-    .chart-row { grid-template-columns: 100px 1fr 70px; font-size: 12px; }
+    .chart-row { grid-template-columns: 90px 1fr 110px; font-size: 12px; }
     table { font-size: 13px; }
     th, td { padding: 10px 8px; }
   }
@@ -348,9 +358,16 @@
 <body>
 <div class="page">
 
-  <p class="meta">Airbnb Pricing Strategy · Updated June 2026</p>
-  <h1>MJL Iconic Terrace<br><span style="color: var(--ink-2); font-weight: 400;">Full-year pricing · Jun 2026 → Jun 2027</span></h1>
-  <p class="lede">A full-year pricing plan (Jun 2026 → Jun 2027) for a 1-bedroom apartment with a huge private terrace at Madinat Jumeirah Living, walking distance to Burj Al Arab. Built on live competitor scans and the 2026–2027 Dubai event calendar. All prices in AED.</p>
+  <p class="meta">Airbnb Pricing Strategy · v6 · Updated August 7, 2026</p>
+  <h1>MJL Iconic Terrace<br><span style="color: var(--ink-2); font-weight: 400;">Full-year pricing · Jul 2026 → Jun 2027</span></h1>
+  <p class="lede">A full-year pricing plan (Jul 2026 → Jun 2027) for a 1-bedroom apartment with a huge private terrace at Madinat Jumeirah Living, walking distance to Burj Al Arab. Built on live competitor scans and the 2026–2027 Dubai event calendar. All prices in AED — and since the August 2026 fee migration, <strong>the price you post is exactly what the guest sees</strong>.</p>
+
+  <!-- CALENDAR ALERT -->
+  <div class="card-alert">
+    <h4>⚠️ #1 action — check the winter calendar</h4>
+    <p style="margin-bottom: 12px;"><strong>Nov 13 – Jan 3 showed completely unavailable on the Aug 7 scan</strong> (even a 4-night NYE stay). If those dates are <strong>booked</strong> — the winter is banked, congratulations. If they're <strong>blocked</strong>, ~AED 40k+ of peak-season gross is frozen. Reopen at <strong>Nov 1,050 · Christmas 1,400 · NYE 2,700</strong> posted — the market has firmed since June (MJL November +24% on small samples), so reopened dates can go out above the June targets.</p>
+    <p style="margin-bottom: 0; color: var(--ink-2); font-size: 15px;">While in the calendar, set minimum-stay rules: <strong>5 nights Christmas · 4 nights NYE, National Day &amp; F1 · 3 nights Jan 2–8 · 2 nights default</strong>. This one check is worth more than every pricing tweak on this page combined.</p>
+  </div>
 
   <!-- LISTING FACTS -->
   <h2>The listing</h2>
@@ -373,22 +390,30 @@
         <div class="value">3–5 min walk to Burj Al Arab + Souk Madinat Jumeirah · Kite Beach 10 min</div>
       </div>
       <div>
-        <div class="label">Reviews <span style="color: var(--accent);">(live, Jun 2026)</span></div>
-        <div class="value"><strong>0 reviews</strong> · 1 month hosting · not yet a Guest Favourite</div>
+        <div class="label">Reviews <span style="color: var(--accent);">(live, Aug 2026)</span></div>
+        <div class="value"><strong>5.0★ · 1 review</strong> — first review landed · not yet a Guest Favourite</div>
       </div>
       <div>
-        <div class="label">Current price (live, Jul 4–11)</div>
-        <div class="value">AED 3,519 → 2,931 for 7 nights (~AED 419–503/night)</div>
+        <div class="label">Fee model (migrated Aug 2026)</div>
+        <div class="value">15.5% host-only fee · posted price = guest price · you net ×0.845</div>
       </div>
     </div>
   </div>
 
-  <p class="pull-quote">This is a <strong>review-velocity year, not a revenue year.</strong> With 0 reviews, the listing must price ~15% below the Madinat comp median to win first bookings. Every early 5-star review is worth ~AED 40–60/night in pricing power over the following 12 months — so the strategy is to fill the calendar and harvest reviews, not to maximise nightly rate yet.</p>
+  <!-- FEE REGIME -->
+  <div class="card-light">
+    <h4 style="margin-top: 0;">How pricing works now — one number, two sides</h4>
+    <p style="margin-bottom: 12px;">The listing migrated to Airbnb's <strong>15.5% host-only service fee</strong> in August 2026 (the co-host's pricing tool raised posted rates ×1.155 to compensate). There is no separate guest service fee anymore: <strong>the nightly price you post is exactly what the guest sees</strong>, and <strong>you net posted × 0.845</strong>. The old "guest sees ≈ ×1.22" rule is dead.</p>
+    <p style="margin-bottom: 12px;"><strong>Worked example</strong> — 3 nights in November at posted AED 960: the guest sees AED 960/night (AED 2,880 accommodation), plus the cleaning fee AED 140, Tourism Dirham AED 45 (15 × 3 nights) and 5% VAT as separate line items. You net AED 811/night (960 × 0.845).</p>
+    <p style="margin-bottom: 0; color: var(--ink-2); font-size: 15px;">Cleaning fee: <strong>AED 140 now → 200 after review #15</strong>. Tourism Dirham: <strong>AED 15/bedroom/night</strong> (holiday-home "Deluxe" rate — the AED 20 figure is the 5-star-hotel rate). 5% UAE VAT rides on top as its own line. All three stay outside the nightly rate.</p>
+  </div>
 
-  <!-- 0-REVIEW vs SISTER LISTING -->
+  <p class="pull-quote">This is still a <strong>review-velocity year, not a revenue year.</strong> The first 5-star review has landed — but with 1 review, the listing keeps pricing ~15% below the Madinat comp median to win bookings. Every early 5-star review is worth ~AED 40–60/night in future pricing power, so the strategy remains: fill the calendar, harvest reviews.</p>
+
+  <!-- 1-REVIEW vs SISTER LISTING -->
   <div class="card-light">
     <h4 style="margin-top: 0;">Where this sits vs the Port de la Mer listing</h4>
-    <p style="margin-bottom: 0; color: var(--ink-2); font-size: 16px;">Sema's other Dubai listing (Port de la Mer) has earned <strong>4.80★ / 5 reviews and a Guest Favourite badge</strong>, so it now prices at the seasonal median. This MJL listing is earlier in its life — <strong>still 0 reviews</strong> — so it stays in the discounted <em>"Now"</em> column. Same playbook, one step behind. The fastest way to close the gap is reviews.</p>
+    <p style="margin-bottom: 0; color: var(--ink-2); font-size: 16px;">Sema's other Dubai listing (Port de la Mer) has earned <strong>4.80★ / 5 reviews and a Guest Favourite badge</strong>, so it now prices at the seasonal median. This MJL listing is earlier in its life — <strong>5.0★ / 1 review</strong>, off the mark at last — so it stays in the discounted <em>"Now"</em> tier until ~15 reviews. Same playbook, one step behind. The fastest way to close the gap is reviews.</p>
   </div>
 
   <!-- DIFFERENTIATOR -->
@@ -401,7 +426,7 @@
 
   <!-- COMP MEDIANS -->
   <h2>Live competitor data</h2>
-  <p>Median nightly rates from Madinat Jumeirah Living / Umm Suqeim 1BR listings (<strong>AED guest-total</strong>, what a guest pays per night including Airbnb's fee — weekend Fri–Sat). MJL has a small comp pool (4–11 active 1BR units per scan), so medians can swing ±20%; treat as directional.</p>
+  <p>Median nightly rates from Madinat Jumeirah Living / Umm Suqeim 1BR listings (<strong>AED guest-total per night</strong>, weekend Fri–Sat — June 3 scan, old fee era). Post-migration, comp guest prices ≈ their posted prices, so compare guest-total to guest-total. MJL has a small comp pool (4–11 active 1BR units per scan), so medians can swing ±20%; treat as directional.</p>
 
   <table>
     <thead>
@@ -416,11 +441,11 @@
     <tbody>
       <tr><td>Aug 14–17 <em>(floor)</em></td><td class="num">10</td><td class="num"><strong>610</strong></td><td class="num">~500</td><td>Largest, tightest pool — true summer floor</td></tr>
       <tr><td>Oct 23–26</td><td class="num">9</td><td class="num"><strong>1,204</strong></td><td class="num">813</td><td>Wide spread</td></tr>
-      <tr><td>Nov 13–16</td><td class="num">8</td><td class="num"><strong>1,219</strong></td><td class="num">1,148</td><td>High-season ramp — confirms AED 980 host peak</td></tr>
+      <tr><td>Nov 13–16</td><td class="num">8</td><td class="num"><strong>1,219</strong></td><td class="num">1,148</td><td>High-season ramp — firmed further by Aug (+24%)</td></tr>
       <tr class="peak"><td>Dec 24–27 <em>(Christmas)</em></td><td class="num">6</td><td class="num"><strong>1,808</strong></td><td class="num">1,536</td><td>Small sample</td></tr>
       <tr class="nye"><td>Dec 30–Jan 2 <em>(NYE)</em></td><td class="num">7</td><td class="num"><strong>2,846</strong></td><td class="num">2,461</td><td>Peak of year — Burj Al Arab fireworks</td></tr>
       <tr><td>Jan 2–5 <em>(Orthodox Xmas)</em></td><td class="num">7</td><td class="num"><strong>2,360</strong></td><td class="num">1,644</td><td>Still NYE-elevated → raised this row</td></tr>
-      <tr><td>Jan 15–18 <em>(winter peak)</em></td><td class="num">7</td><td class="num"><strong>1,159</strong></td><td class="num">1,119</td><td>Tight cluster — validates AED 980 host</td></tr>
+      <tr><td>Jan 15–18 <em>(winter peak)</em></td><td class="num">7</td><td class="num"><strong>1,159</strong></td><td class="num">1,119</td><td>Tight cluster</td></tr>
       <tr><td>Feb 20–23 <em>(Ramadan)</em></td><td class="num">6</td><td class="num"><strong>1,194</strong></td><td class="num">1,064</td><td>Firmer than assumed → nudged up</td></tr>
       <tr><td>Mar 10–13 <em>(Eid)</em></td><td class="num">7</td><td class="num"><strong>1,245</strong></td><td class="num">852</td><td>Event not priced in 10mo out → moderated</td></tr>
       <tr><td>Mar 26–29 <em>(Dubai World Cup)</em></td><td class="num">7</td><td class="num"><strong>1,056</strong></td><td class="num">711</td><td>No event premium visible → lowered</td></tr>
@@ -428,26 +453,32 @@
     </tbody>
   </table>
 
-  <p style="color: var(--ink-2); font-size: 14px;"><strong>AED guest-total per night.</strong> "No-view anchor" = lower-cluster proxy (cheapest ~40% of comps) — the right reference for this courtyard-facing ground-floor unit, since the full median is pulled up by genuine Burj Al Arab <em>view</em> units it can't match. The no-view anchor runs ~25–40% below the median across seasons. <strong>The comp pool did not grow</strong> — it's the same stable ~8–10 core MJL 1BR units repriced seasonally, so the picture is refinement, not new supply.</p>
+  <p style="color: var(--ink-2); font-size: 14px;"><strong>AED guest-total per night.</strong> "No-view anchor" = lower-cluster proxy (cheapest ~40% of comps) — the right reference for this courtyard-facing ground-floor unit, since the full median is pulled up by genuine Burj Al Arab <em>view</em> units it can't match. The no-view anchor runs ~25–40% below the median across seasons.</p>
 
-  <h3>AirROI market reality-check (Dubai, June 2026)</h3>
+  <h3>August 7, 2026 re-scan — what moved</h3>
+  <p>A fresh comp scan (MJL Nov 13–15: 10 comps, plus Christmas / NYE / January windows; PLN→AED @ 0.98) against the migrated posted rates:</p>
+  <ul class="checklist">
+    <li><strong>Winter core firmed since June</strong> — MJL November medians up ~24% (small samples, but the direction is consistent across windows). The migrated posted rates for Oct–Feb sit right in strategy — no change.</li>
+    <li><strong>September is soft</strong> — the one cut in v6: Sep 16–30 drops to posted <strong>650</strong> (was ~700), which was running above the overall market median on a 1-review listing.</li>
+    <li><strong>NYE scanned −20%</strong> vs June — but on a tiny sample, and NYE comps reprice late. <strong>Hold 2,540 posted.</strong></li>
+    <li><strong>January runs +9% over the old target</strong> at the live migrated rate (posted 1,095) — hold it: winter firmed and it still sits ~9% below the comp median.</li>
+  </ul>
+
+  <h3>AirROI market reality-check (Dubai)</h3>
   <table>
     <thead>
       <tr><th>Metric</th><th class="num">Value</th><th>Implication</th></tr>
     </thead>
     <tbody>
       <tr><td>Median ADR (1BR ≈ market median)</td><td class="num">~AED 800</td><td>This unit's blended ADR target sits around here</td></tr>
-      <tr><td>Median occupancy</td><td class="num">~39%</td><td>A 0-review listing runs below this in Y1</td></tr>
-      <tr><td>Median annual revenue / listing</td><td class="num">~AED 83k</td><td>Y1 net (~AED 88k) lands right at market median</td></tr>
+      <tr><td>Median occupancy (Aug 2026 calibration)</td><td class="num">~40%</td><td>A 1-review listing runs below this in Y1 · Dubai supply +87% YoY</td></tr>
+      <tr><td>Median annual revenue / listing</td><td class="num">~AED 83k</td><td>Y1 STR-only net (~AED 25–45k) runs below median — see projection</td></tr>
       <tr><td>Top-25% threshold</td><td class="num">~63% occ · ADR AED 1,259+</td><td>Year-2 target once reviews mature</td></tr>
       <tr><td>Top-10% threshold</td><td class="num">~80% occ · ADR AED 2,037+</td><td>Superhost / long-term ceiling</td></tr>
       <tr><td>Winter-peak ÷ summer-trough ADR</td><td class="num">~1.4–1.5×</td><td>Confirms the seasonal shape (events aside)</td></tr>
     </tbody>
   </table>
   <p style="color: var(--ink-2); font-size: 14px;">No submarket-level AirROI page exists for Umm Suqeim / Madinat Jumeirah, so MJL performance is inferred from Dubai-wide 1BR data (1BR = 51% of the market, so the market median effectively <em>is</em> the 1BR median). Sources: AirROI Dubai dashboard + report, corroborated against Airbtics.</p>
-
-  <h3>Ordinary-day ramp check (June 2026)</h3>
-  <p>Beyond the event peaks, we scanned plain mid-week, non-holiday dates each month to verify the gradual summer→winter climb. No-view host-equivalent per night: <strong>June ~380 · July ~407 · August ~473 · early-Sep ~418 · October ~713 · November ~720–870 (post-tier ≈ comp median ~1,007)</strong>. The ramp is sound and the autumn/winter base rates checked out (October's 710 matched the comps almost exactly). The one correction: <strong>June was trimmed 420/495 → 400/460</strong> — live comps show June sitting <em>at</em> the summer floor, not above it. (Near-term months like June read slightly low because of last-minute discounting; the forward floor is the cleaner ~AED 390–400 host signal.)</p>
 
   <!-- DEMAND CALENDAR -->
   <h2>Dubai 2026–2027 demand calendar</h2>
@@ -480,190 +511,187 @@
   </table>
 
   <!-- PRICING TABLE -->
-  <h2>Recommended host nightly rate</h2>
-  <p>Two columns: <strong>Now</strong> (0 reviews) is priced ~15% below the Madinat comp median to win first bookings. <strong>After 15+ reviews</strong> at 4.7★+ matches the median. <strong>As of June 2026 the listing still has 0 reviews — use the "Now" column</strong> until reviews accumulate, then graduate to the right-hand column.</p>
-
-  <p style="color: var(--ink-3); font-size: 14px;">Set these prices on the host side. Airbnb adds ~14% guest service fee on top.</p>
+  <h2>Recommended posted nightly rate</h2>
+  <p>One posted number per period — <strong>YOU SET = GUEST SEES</strong> — with your net alongside (<strong>posted × 0.845</strong> after Airbnb's 15.5% host-only fee). The current tier is priced ~15% below the Madinat comp median to win bookings while the review base builds. <strong>At 15+ reviews and 4.7★+, graduate to the "After 15+ reviews" posted column</strong> (≈ +15–20%). Live rates already match this table after the ×1.155 migration — the one change to enter is <strong>Sep 16–30 → 650</strong>.</p>
 
   <table>
     <thead>
       <tr>
         <th>Period</th>
         <th class="num">Days</th>
-        <th class="num">Now (0 rev)<br>AED</th>
-        <th class="num">After 15+ rev<br>AED</th>
+        <th class="num">You set =<br>guest sees</th>
+        <th class="num">You net<br>(×0.845)</th>
+        <th class="num">After 15+ rev<br>(posted)</th>
         <th>Notes</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>May 29 – Jun 30 '26</td><td class="num">33</td><td class="num">400</td><td class="num">460</td><td>Re-scan: June at summer floor (lowered from 420/495)</td></tr>
-      <tr><td>Jul 1 – Aug 31 '26 (rock bottom)</td><td class="num">62</td><td class="num">390</td><td class="num">460</td><td>−22% for 28+ night stays</td></tr>
-      <tr><td>Sep 1–15 '26</td><td class="num">15</td><td class="num">450</td><td class="num">530</td><td>Still hot, demand not pivoted</td></tr>
-      <tr><td>Sep 16–30 '26</td><td class="num">15</td><td class="num">610</td><td class="num">720</td><td>Weather breaks</td></tr>
-      <tr><td>Oct 1–22 '26</td><td class="num">22</td><td class="num">710</td><td class="num">840</td><td>Family travel begins</td></tr>
-      <tr><td>Oct 23–31 '26 (UK half-term)</td><td class="num">9</td><td class="num">840</td><td class="num">990</td><td>British family bump + Halloween</td></tr>
-      <tr><td>Nov 1–22 '26</td><td class="num">22</td><td class="num">830</td><td class="num">980</td><td>Best Dubai weather</td></tr>
-      <tr><td>Nov 23–29 '26</td><td class="num">7</td><td class="num">940</td><td class="num">1,110</td><td>National Day approach</td></tr>
-      <tr><td>Nov 30 – Dec 3 '26 (UAE NatDay)</td><td class="num">4</td><td class="num">1,005</td><td class="num">1,185</td><td>3-day holiday, local demand</td></tr>
-      <tr class="peak"><td><strong>Dec 4–7 '26 (F1 GP)</strong></td><td class="num">4</td><td class="num"><strong>855</strong></td><td class="num"><strong>1,010</strong></td><td>Spillover only — don't overprice</td></tr>
-      <tr><td>Dec 8–15 '26 (DSF lull)</td><td class="num">8</td><td class="num">730</td><td class="num">860</td><td>Post-F1 lull</td></tr>
-      <tr><td>Dec 16–22 '26 (pre-Xmas)</td><td class="num">7</td><td class="num">1,140</td><td class="num">1,345</td><td>European arrivals</td></tr>
-      <tr class="peak"><td><strong>Dec 23–27 '26 (Christmas)</strong></td><td class="num">5</td><td class="num"><strong>1,200</strong></td><td class="num"><strong>1,415</strong></td><td>5-night minimum</td></tr>
-      <tr><td>Dec 28–29 '26</td><td class="num">2</td><td class="num">1,580</td><td class="num">1,865</td><td>Bridge to NYE</td></tr>
-      <tr class="nye"><td><strong>Dec 30 – Jan 1 (NYE)</strong></td><td class="num">3</td><td class="num"><strong>2,200</strong></td><td class="num"><strong>2,600</strong></td><td>4-night minimum, never discount</td></tr>
-      <tr><td>Jan 2–8 '27 (Russian Orthodox Xmas)</td><td class="num">7</td><td class="num">880</td><td class="num">1,040</td><td>CIS wave, still NYE-elevated (re-scan), 3-night min</td></tr>
-      <tr><td>Jan 9–31 '27 (winter-sun peak)</td><td class="num">23</td><td class="num">830</td><td class="num">980</td><td>Prime season, DSF to ~Jan 29</td></tr>
-      <tr><td>Feb 1–5 '27 (pre-Ramadan)</td><td class="num">5</td><td class="num">800</td><td class="num">950</td><td>Peak winter + Valentine's</td></tr>
-      <tr><td>Feb 6 – Mar 7 '27 (Ramadan)</td><td class="num">30</td><td class="num">720</td><td class="num">850</td><td>Re-scan firmer; lean on 7+ night discounts</td></tr>
-      <tr class="peak"><td><strong>Mar 8–14 '27 (Eid al-Fitr)</strong></td><td class="num">7</td><td class="num"><strong>780</strong></td><td class="num"><strong>920</strong></td><td>GCC family spike; comps soft 10mo out — revisit</td></tr>
-      <tr><td>Mar 15–25 '27 (spring shoulder)</td><td class="num">11</td><td class="num">660</td><td class="num">780</td><td>Post-Eid, warming</td></tr>
-      <tr><td>Mar 26–28 '27 (Dubai World Cup)</td><td class="num">3</td><td class="num">640</td><td class="num">750</td><td>No premium in MJL pool (re-scan), 2-night min</td></tr>
-      <tr><td>Mar 29 – Apr 15 '27 (spring tail)</td><td class="num">18</td><td class="num">600</td><td class="num">700</td><td>Warming into low-30s°C</td></tr>
-      <tr><td>Apr 16–30 '27 (warming)</td><td class="num">15</td><td class="num">540</td><td class="num">630</td><td>Re-scan firmer. Heat building toward summer</td></tr>
-      <tr><td>May 1–31 '27 (low)</td><td class="num">31</td><td class="num">430</td><td class="num">510</td><td>Listing aging, slight premium</td></tr>
-      <tr><td>Jun 1–30 '27 (summer entry)</td><td class="num">30</td><td class="num">400</td><td class="num">460</td><td>Summer floor (re-scan: June at floor) — full year complete</td></tr>
+      <tr><td>Jul 1 – Aug 31 '26 (summer floor)</td><td class="num">62</td><td class="num">450</td><td class="num">380</td><td class="num">530</td><td>Hybrid-calendar candidate (monthly lets)</td></tr>
+      <tr><td>Sep 1–15 '26</td><td class="num">15</td><td class="num">520</td><td class="num">439</td><td class="num">610</td><td>Still hot, demand not pivoted</td></tr>
+      <tr><td>Sep 16–30 '26</td><td class="num"><strong>15</strong></td><td class="num"><strong>▼ 650</strong></td><td class="num">549</td><td class="num">830</td><td><strong>The one cut</strong> — from ~700; above median on 1 review</td></tr>
+      <tr><td>Oct 1–22 '26</td><td class="num">22</td><td class="num">820</td><td class="num">693</td><td class="num">970</td><td>Family travel begins</td></tr>
+      <tr><td>Oct 23–31 '26 (UK half-term)</td><td class="num">9</td><td class="num">970</td><td class="num">820</td><td class="num">1,145</td><td>British family bump + Halloween</td></tr>
+      <tr><td>Nov 1–22 '26</td><td class="num">22</td><td class="num">960</td><td class="num">811</td><td class="num">1,130</td><td>Best weather · reopen at 1,050 if unblocking</td></tr>
+      <tr><td>Nov 23–29 '26</td><td class="num">7</td><td class="num">1,085</td><td class="num">917</td><td class="num">1,280</td><td>National Day approach</td></tr>
+      <tr><td>Nov 30 – Dec 3 '26 (UAE NatDay)</td><td class="num">4</td><td class="num">1,160</td><td class="num">980</td><td class="num">1,370</td><td>4-night minimum</td></tr>
+      <tr class="peak"><td><strong>Dec 4–7 '26 (F1 GP)</strong></td><td class="num">4</td><td class="num"><strong>990</strong></td><td class="num">837</td><td class="num"><strong>1,165</strong></td><td>4-night min — spillover only, don't overprice</td></tr>
+      <tr><td>Dec 8–15 '26 (DSF lull)</td><td class="num">8</td><td class="num">845</td><td class="num">714</td><td class="num">995</td><td>Post-F1 lull</td></tr>
+      <tr><td>Dec 16–22 '26 (pre-Xmas)</td><td class="num">7</td><td class="num">1,315</td><td class="num">1,111</td><td class="num">1,555</td><td>European arrivals</td></tr>
+      <tr class="peak"><td><strong>Dec 23–27 '26 (Christmas)</strong></td><td class="num">5</td><td class="num"><strong>1,385</strong></td><td class="num">1,170</td><td class="num"><strong>1,635</strong></td><td>5-night min · reopen at 1,400 if unblocking</td></tr>
+      <tr><td>Dec 28–29 '26</td><td class="num">2</td><td class="num">1,825</td><td class="num">1,542</td><td class="num">2,155</td><td>Bridge to NYE</td></tr>
+      <tr class="nye"><td><strong>Dec 30 – Jan 1 (NYE)</strong></td><td class="num">3</td><td class="num"><strong>2,540</strong></td><td class="num">2,146</td><td class="num"><strong>3,000</strong></td><td>4-night min, never discount · reopen at 2,700 if unblocking</td></tr>
+      <tr><td>Jan 2–8 '27 (Orthodox Xmas)</td><td class="num">7</td><td class="num">1,015</td><td class="num">858</td><td class="num">1,200</td><td>CIS wave · 3-night min</td></tr>
+      <tr><td>Jan 9–31 '27 (winter-sun peak)</td><td class="num">23</td><td class="num">1,095</td><td class="num">925</td><td class="num">1,130</td><td>Hold live rate — still ~9% below median</td></tr>
+      <tr><td>Feb 1–5 '27 (pre-Ramadan)</td><td class="num">5</td><td class="num">925</td><td class="num">782</td><td class="num">1,095</td><td>Peak winter</td></tr>
+      <tr><td>Feb 6 – Mar 7 '27 (Ramadan)</td><td class="num">30</td><td class="num">830</td><td class="num">701</td><td class="num">980</td><td>Lean on 7+ night discounts</td></tr>
+      <tr class="peak"><td><strong>Mar 8–14 '27 (Eid al-Fitr)</strong></td><td class="num">7</td><td class="num"><strong>900</strong></td><td class="num">761</td><td class="num"><strong>1,065</strong></td><td>GCC family spike</td></tr>
+      <tr><td>Mar 15–25 '27 (spring shoulder)</td><td class="num">11</td><td class="num">760</td><td class="num">642</td><td class="num">900</td><td>Post-Eid, warming</td></tr>
+      <tr><td>Mar 26–28 '27 (Dubai World Cup)</td><td class="num">3</td><td class="num">740</td><td class="num">625</td><td class="num">865</td><td>No premium in MJL pool · 2-night min</td></tr>
+      <tr><td>Mar 29 – Apr 15 '27 (spring tail)</td><td class="num">18</td><td class="num">695</td><td class="num">587</td><td class="num">810</td><td>Warming into low-30s°C</td></tr>
+      <tr><td>Apr 16–30 '27 (warming)</td><td class="num">15</td><td class="num">625</td><td class="num">528</td><td class="num">730</td><td>Heat building toward summer</td></tr>
+      <tr><td>May 1–31 '27 (low)</td><td class="num">31</td><td class="num">495</td><td class="num">418</td><td class="num">590</td><td>Listing aging, slight premium</td></tr>
+      <tr><td>Jun 1–30 '27 (summer entry)</td><td class="num">30</td><td class="num">460</td><td class="num">389</td><td class="num">530</td><td>Hybrid-calendar candidate — full year complete</td></tr>
     </tbody>
   </table>
 
+  <p style="color: var(--ink-3); font-size: 14px;">Discounts: 7+ nights −10% · 14+ −15% · 28+ −22%. Minimum nights: 2 default (5 Christmas · 4 NYE/NatDay/F1 · 3 Jan 2–8). Smart Pricing off. Cleaning fee AED 140 (→ 200 after review #15), Tourism Dirham AED 15/bedroom/night and 5% VAT are separate line items on top.</p>
+
   <!-- VISUAL CHART -->
   <h3>Visual yearly profile</h3>
-  <p style="color: var(--ink-2); font-size: 14px;">Host AED nightly rate, post-15-reviews tier.</p>
+  <p style="color: var(--ink-2); font-size: 14px;">Posted nightly rate (= what the guest sees), current tier. Right column: <strong>posted → your net (×0.845)</strong>.</p>
 
   <div class="chart">
     <div class="chart-row nye-bar">
       <span class="label">NYE</span>
       <div class="bar" style="width: 100%;"></div>
-      <span class="price">2,600</span>
+      <span class="price">2,540 → 2,146</span>
     </div>
     <div class="chart-row">
       <span class="label">Pre-NYE</span>
       <div class="bar" style="width: 72%;"></div>
-      <span class="price">1,865</span>
+      <span class="price">1,825 → 1,542</span>
     </div>
     <div class="chart-row peak-bar">
       <span class="label">Christmas</span>
-      <div class="bar" style="width: 54%;"></div>
-      <span class="price">1,415</span>
+      <div class="bar" style="width: 55%;"></div>
+      <span class="price">1,385 → 1,170</span>
     </div>
     <div class="chart-row">
       <span class="label">Pre-Xmas</span>
       <div class="bar" style="width: 52%;"></div>
-      <span class="price">1,345</span>
+      <span class="price">1,315 → 1,111</span>
     </div>
     <div class="chart-row">
       <span class="label">UAE NatDay</span>
       <div class="bar" style="width: 46%;"></div>
-      <span class="price">1,185</span>
-    </div>
-    <div class="chart-row peak-bar">
-      <span class="label">F1 GP</span>
-      <div class="bar" style="width: 39%;"></div>
-      <span class="price">1,010</span>
-    </div>
-    <div class="chart-row">
-      <span class="label">UK half-term</span>
-      <div class="bar" style="width: 38%;"></div>
-      <span class="price">990</span>
-    </div>
-    <div class="chart-row">
-      <span class="label">Nov peak</span>
-      <div class="bar" style="width: 38%;"></div>
-      <span class="price">980</span>
+      <span class="price">1,160 → 980</span>
     </div>
     <div class="chart-row">
       <span class="label">Jan peak '27</span>
-      <div class="bar" style="width: 38%;"></div>
-      <span class="price">980</span>
+      <div class="bar" style="width: 43%;"></div>
+      <span class="price">1,095 → 925</span>
     </div>
     <div class="chart-row">
       <span class="label">Russian Xmas '27</span>
       <div class="bar" style="width: 40%;"></div>
-      <span class="price">1,040</span>
+      <span class="price">1,015 → 858</span>
+    </div>
+    <div class="chart-row peak-bar">
+      <span class="label">F1 GP</span>
+      <div class="bar" style="width: 39%;"></div>
+      <span class="price">990 → 837</span>
+    </div>
+    <div class="chart-row">
+      <span class="label">UK half-term</span>
+      <div class="bar" style="width: 38%;"></div>
+      <span class="price">970 → 820</span>
+    </div>
+    <div class="chart-row">
+      <span class="label">Nov peak</span>
+      <div class="bar" style="width: 38%;"></div>
+      <span class="price">960 → 811</span>
     </div>
     <div class="chart-row peak-bar">
       <span class="label">Eid '27</span>
       <div class="bar" style="width: 35%;"></div>
-      <span class="price">920</span>
-    </div>
-    <div class="chart-row">
-      <span class="label">October</span>
-      <div class="bar" style="width: 32%;"></div>
-      <span class="price">840</span>
+      <span class="price">900 → 761</span>
     </div>
     <div class="chart-row">
       <span class="label">Ramadan '27</span>
       <div class="bar" style="width: 33%;"></div>
-      <span class="price">850</span>
+      <span class="price">830 → 701</span>
+    </div>
+    <div class="chart-row">
+      <span class="label">October</span>
+      <div class="bar" style="width: 32%;"></div>
+      <span class="price">820 → 693</span>
     </div>
     <div class="chart-row">
       <span class="label">Sep late</span>
-      <div class="bar" style="width: 28%;"></div>
-      <span class="price">720</span>
+      <div class="bar" style="width: 26%;"></div>
+      <span class="price">650 → 549</span>
     </div>
     <div class="chart-row">
       <span class="label">Late April '27</span>
-      <div class="bar" style="width: 23%;"></div>
-      <span class="price">600</span>
+      <div class="bar" style="width: 25%;"></div>
+      <span class="price">625 → 528</span>
     </div>
     <div class="chart-row">
-      <span class="label">May / Jun</span>
-      <div class="bar" style="width: 18%;"></div>
-      <span class="price">460</span>
+      <span class="label">May '27</span>
+      <div class="bar" style="width: 19%;"></div>
+      <span class="price">495 → 418</span>
     </div>
     <div class="chart-row">
       <span class="label">Jul – Aug</span>
       <div class="bar" style="width: 18%;"></div>
-      <span class="price">460</span>
+      <span class="price">450 → 380</span>
     </div>
   </div>
 
   <!-- ACTIONS -->
   <h2>Actions to take this week</h2>
   <ol class="actions">
-    <li><strong>Get the first reviews — top priority.</strong> The listing is stuck in the discounted "Now" column until it has reviews. Price to fill, message guests day-of-checkout for a review, and aim for the first 5 reviews fast. Each one is worth ~AED 40–60/night going forward.</li>
-    <li><strong>Hero the terrace in photos.</strong> Lead with the private terrace shot at golden hour, set for outdoor dining. Add a wide shot showing the 91.5 m² space. The terrace is your "view" — show it first.</li>
-    <li><strong>Title built on space + location.</strong> Something like <em>"MJL · Huge Private Terrace · Walk to Burj Al Arab"</em> — bookers search by landmark and outdoor space, neither of which most MJL comps offer.</li>
-    <li><strong>Hold the summer floor at AED 390.</strong> Live July rate is ~AED 419–503/night — slightly above floor. Through Jul–Aug, drop toward 390 and lean on the −22% monthly discount to capture long stays.</li>
-    <li><strong>Block Dec 30 – Jan 1 now</strong> at AED 2,200 with a 4-night minimum. Never discount NYE — it's the single highest-value window of the year.</li>
-    <li><strong>Turn off Smart Pricing.</strong> Use this seasonal table. Smart Pricing under-prices peaks and over-discounts a new listing's low season.</li>
-    <li><strong>Set length-of-stay discounts:</strong> 7+ nights −10%, 14+ −15%, 28+ −22% — essential for filling summer and Ramadan.</li>
+    <li><strong>Check Nov 13 – Jan 3 in the host dashboard — booked or blocked?</strong> The whole window showed unavailable on the Aug 7 scan. If blocked, ~AED 40k+ of peak season is frozen: reopen at Nov 1,050 · Christmas 1,400 · NYE 2,700 posted.</li>
+    <li><strong>Set minimum-stay rules:</strong> 5 nights Christmas · 4 nights NYE, National Day &amp; F1 · 3 nights Jan 2–8 · 2 nights default. Peak windows without minimums leak one-night gaps.</li>
+    <li><strong>Enter the one rate change: Sep 16–30 → posted 650</strong> (you net 549). The migrated rate (~700) sits above the overall market median — too rich for a 1-review listing.</li>
+    <li><strong>Keep harvesting reviews.</strong> The first 5.0★ review landed — aim for 15. Price to fill, message guests day-of-checkout, and treat each review as ~AED 40–60/night of future pricing power. At review #15: raise the cleaning fee 140 → 200 and graduate to the "After" column.</li>
+    <li><strong>Consider the hybrid calendar for Jun–Sep:</strong> at summer STR rates this unit grosses ~AED 4–5k/month; a furnished monthly let at ~AED 8–9k/month (within the holiday-home permit's under-6-month limit) roughly doubles trough income while reviews build for winter.</li>
+    <li><strong>Hero the terrace in photos.</strong> Lead with the private terrace at golden hour, set for outdoor dining; add a wide shot showing the 91.5 m². The terrace is your "view" — show it first.</li>
+    <li><strong>Turn off Smart Pricing and set length-of-stay discounts:</strong> 7+ nights −10% · 14+ −15% · 28+ −22% — essential for filling summer and Ramadan.</li>
   </ol>
 
   <!-- REVENUE PROJECTION -->
   <h2>Annual revenue projection</h2>
+  <p style="color: var(--ink-2); font-size: 15px;">Calibrated August 2026: Dubai median occupancy ~40%, supply +87% YoY. Net = after Airbnb's 15.5% host fee.</p>
 
   <table>
     <thead>
       <tr>
         <th>Scenario</th>
-        <th class="num">ADR (host AED)</th>
         <th class="num">Occupancy</th>
         <th class="num">Annual net</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><strong>Year 1 (now, 0 → 15 reviews)</strong></td>
-        <td class="num"><strong>~612</strong></td>
-        <td class="num"><strong>40%</strong></td>
-        <td class="num"><strong>AED ~88k</strong> <span style="color: var(--ink-3);">(~$24k)</span></td>
+        <td><strong>Year 1 (1 → 15 reviews)</strong></td>
+        <td class="num"><strong>35–45%</strong></td>
+        <td class="num"><strong>AED ~25–45k</strong> STR-only <span style="color: var(--ink-3);">· +10–20k with hybrid summer</span></td>
       </tr>
       <tr>
         <td><strong>Year 2+ (15+ reviews, 4.7★+)</strong></td>
-        <td class="num"><strong>~720</strong></td>
-        <td class="num"><strong>60%</strong></td>
-        <td class="num"><strong>AED ~153k</strong> <span style="color: var(--ink-3);">(~$42k)</span></td>
+        <td class="num"><strong>55–60%</strong></td>
+        <td class="num"><strong>AED ~60–90k</strong></td>
       </tr>
       <tr>
         <td><strong>Year 3+ (Superhost, 50+ reviews)</strong></td>
-        <td class="num"><strong>~810</strong></td>
         <td class="num"><strong>65%</strong></td>
-        <td class="num"><strong>AED ~186k</strong> <span style="color: var(--ink-3);">(~$51k)</span></td>
+        <td class="num"><strong>AED ~110k+</strong></td>
       </tr>
     </tbody>
   </table>
 
-  <p class="pull-quote">Year 1 sits at the Dubai market median (AED ~95k/listing). The asset value is the climb: each review tier unlocks the next occupancy and ADR band. Price to build the review base first.</p>
+  <p class="pull-quote">Reality check: this unit would earn ~AED 103k net on a plain annual lease — STR only beats that at top-quartile occupancy. The terrace differentiator and review compounding are the case for staying the course; the hybrid summer calendar hedges the gap while the review base builds.</p>
 
   <!-- COMPARISON -->
   <h2>How this differs from the Port de la Mer listing</h2>
@@ -677,8 +705,9 @@
       <tr><td>View</td><td>None — courtyard</td><td>Marina + Burj Khalifa</td></tr>
       <tr><td>Unique feature</td><td><strong>Private terrace + pool access</strong></td><td>Burj Khalifa view</td></tr>
       <tr><td>Location</td><td>Walk to Burj Al Arab + Madinat Souk</td><td>Walk to La Mer beach</td></tr>
-      <tr><td>Reviews (Jun 2026)</td><td><strong>0</strong> · 1 month hosting</td><td>5 · 4.80★ · Guest Favourite ✨</td></tr>
+      <tr><td>Reviews (Aug 2026)</td><td><strong>1 · 5.0★</strong> — first review landed</td><td>5 · 4.80★ · Guest Favourite ✨</td></tr>
       <tr><td>Pricing tier in use</td><td><strong>"Now" — 15% below median</strong></td><td>"After 15+ reviews" — median</td></tr>
+      <tr><td>Fee model</td><td>15.5% host-only (migrated Aug 2026)</td><td>15.5% host-only (migrated Aug 2026)</td></tr>
       <tr><td>Low-season rate vs PdLM</td><td><strong>+15–20%</strong> (terrace/space premium)</td><td>baseline</td></tr>
       <tr><td>Winter peak vs PdLM</td><td>~level to +5%</td><td>baseline</td></tr>
     </tbody>
@@ -687,7 +716,7 @@
   <!-- SOURCES -->
   <div class="sources">
     <h4 style="margin-top: 0;">Sources &amp; methodology</h4>
-    <p>Live Airbnb scans of Madinat Jumeirah Living / Umm Suqeim 1BR listings (2026 calendar: 7 date ranges; June 2026 re-scan: Jan/Feb/Apr 2027 + Nov 2026 sanity, MJL-building filtered, trimmed medians). Cross-referenced with the Dubai 2026 &amp; 2027 events calendars (Ramadan ~Feb 6–Mar 7, Eid ~Mar 8–12, F1 Abu Dhabi GP, Dubai World Cup Mar 27, DSF to ~Jan 29, UAE National Day) and AirROI Dubai STR benchmarks.</p>
+    <p>Live Airbnb scans of Madinat Jumeirah Living / Umm Suqeim 1BR listings (2026 calendar: 7 date ranges; June 2026 re-scan: Jan/Feb/Apr 2027 + Nov 2026 sanity; <strong>August 7, 2026 re-scan</strong>: MJL Nov 13–15 with 10 comps + Christmas/NYE/January windows, PLN→AED @ 0.98, post-fee-migration posted-price basis). Cross-referenced with the Dubai 2026 &amp; 2027 events calendars (Ramadan ~Feb 6–Mar 7, Eid ~Mar 8–12, F1 Abu Dhabi GP, Dubai World Cup Mar 27, DSF to ~Jan 29, UAE National Day) and AirROI Dubai STR benchmarks.</p>
     <ul style="list-style: none; padding-left: 0; margin-top: 16px;">
       <li><a href="https://www.visitdubai.com/en/festivals-and-events/dubai-events-calendar">Visit Dubai events calendar</a></li>
       <li><a href="https://www.timeoutdubai.com/news/dubai-public-holidays-2027">Time Out Dubai — UAE public holidays 2027</a></li>
@@ -698,7 +727,7 @@
   </div>
 
   <footer>
-    <p>Prepared for Sema · April 29, 2026 · extended to full year + two-agent research refresh (live Airbnb comps × AirROI) June 3, 2026 · Listing 1669457478098882661</p>
+    <p>Prepared for Sema · v6 · August 7, 2026 — fee-regime repricing (15.5% host-only) + live comp re-scan, PLN→AED @ 0.98 · Built on the June 3, 2026 full-year calendar (v4/v5) · Listing 1669457478098882661</p>
   </footer>
 
 </div>
